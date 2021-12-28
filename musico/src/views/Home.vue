@@ -20,14 +20,14 @@
 </template>
 
 <script>
-import { getAPI } from "../axios-api.js";
+// import { getAPI } from "../axios-api.js";
 import NavBar from '@/components/NavBar';
 
 export default {
   name: "Home",
 
   components: { NavBar },
-
+  /*
   created() {
     // Axios for already created user with a token
     const access_token = "ae8466b307125e94db84ca3e1394da9ca671a29c";
@@ -46,5 +46,6 @@ export default {
         console.log(err);
       });
   },
+  */
 };
 </script>
