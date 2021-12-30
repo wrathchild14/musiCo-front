@@ -1,6 +1,6 @@
 <template>
   <v-main>
-    <v-btn x-large text @click="dialog = true">Profile</v-btn>
+    <v-btn x-large text @click="dialog = true" class="white--text">Profile</v-btn>
 
     <v-dialog v-model="dialog" max-width="600px" min-width="360px">
       <div>

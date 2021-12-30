@@ -1,16 +1,17 @@
 <template>
-  <v-toolbar class="elevation-0 grey lighten-3">
-    <v-toolbar-title>
-      <h2><v-icon>mdi-music</v-icon> MusiCo</h2>
+  <v-toolbar class="elevation-0 blue-grey darken-1">
+    <v-toolbar-title style="cursor: pointer" @click="$router.push('/')">
+      <v-btn x-large text to="/"> <v-icon>mdi-music</v-icon> MusiCo </v-btn>
     </v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-btn x-large text to="/concerts">Concerts</v-btn>
+    <v-btn x-large text to="/concerts" class="white--text">Concerts</v-btn>
     <v-spacer></v-spacer>
-    <v-btn x-large text to="/artists">Artists</v-btn>
+    <v-btn x-large text to="/artists" class="white--text">Artists</v-btn>
     <v-spacer></v-spacer>
-
     <!-- Sign in button is in here as well -->
     <Login />
+    
+    
   </v-toolbar>
 </template>
 
