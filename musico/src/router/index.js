@@ -12,11 +12,6 @@ const routes = [{
     component: Home
   },
   {
-    path: '/sign-in',
-    name: 'Sign-in',
-    component: () => import('../views/Sign-in.vue') // TODO
-  },
-  {
     path: '/concerts',
     name: 'Concerts',
     component: Concerts
