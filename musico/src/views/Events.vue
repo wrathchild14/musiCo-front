@@ -11,6 +11,11 @@
                 </v-row>
             </div>
         </v-card>
+        <v-card width="70%" class="mx-auto my-10 elevation-0">
+            <div class="text-center">
+                <h1>Events at your location:</h1>
+            </div>
+        </v-card>
 
         <div class="events">
             <v-container class="mt-5">
@@ -28,9 +33,11 @@
                 
                 <v-row>
                     <v-col v-for="event in events" :key="event.id" md="4" xs="12">
+                        
                     <v-card
                         class="mx-auto"
                         max-width="400"
+                        height="350"
                     >
                         <v-img
                         class="white--text align-end"
@@ -44,14 +51,14 @@
                         </v-card-title>
                         </v-img>
 
-                        <v-card-subtitle class="pb-0">
+                        <v-card-subtitle class="pb-0 font-weight-bold">
                         {{ event.date }}
                         </v-card-subtitle>
 
                         <v-card-text class="text--primary">
 
-                        <div class="font-weight-bold text-h6">{{ event.venue.name }}</div>
-                        <div>{{ event.venue.info }}</div>
+                        <div ><h2 class="red--text text--darken-1 my-2">{{ event.venue.name }}</h2></div>
+                        <div><h3 class="font-weight-light my-2"><v-icon >mdi-map-marker</v-icon>{{ event.venue.info }}</h3></div>
                         </v-card-text>
 
                     </v-card>

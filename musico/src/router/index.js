@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import Events from '../views/Events'
 import Artists from '../views/Artists'
+import AllArtists from '../views/AllArtists'
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,11 @@ const routes = [{
     path: '/artists',
     name: 'Artists',
     component: Artists
+  },
+  {
+    path: '/allartists',
+    name: 'AllArtists',
+    component: AllArtists
   },
 ]
 

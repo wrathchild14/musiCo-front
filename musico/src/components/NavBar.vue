@@ -6,7 +6,7 @@
     <v-spacer></v-spacer>
     <v-btn x-large text to="/events" class="white--text">Events</v-btn>
     <v-spacer></v-spacer>
-    <v-btn x-large text to="/artists" class="white--text">Artists</v-btn>
+    <v-btn x-large text to="/allartists" class="white--text">Artists</v-btn>
     <v-spacer></v-spacer>
     <!-- Sign in button is in here as well -->
     <Login />
