@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Concerts from '../views/Concerts'
+import Home from '../views/Home'
+import Events from '../views/Events'
 import Artists from '../views/Artists'
 
 Vue.use(VueRouter)
@@ -12,9 +12,9 @@ const routes = [{
     component: Home
   },
   {
-    path: '/concerts',
-    name: 'Concerts',
-    component: Concerts
+    path: '/events',
+    name: 'Events',
+    component: Events
   },
   {
     path: '/artists',

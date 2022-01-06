@@ -4,7 +4,7 @@
       <v-btn x-large text to="/"> <v-icon>mdi-music</v-icon> MusiCo </v-btn>
     </v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-btn x-large text to="/concerts" class="white--text">Concerts</v-btn>
+    <v-btn x-large text to="/events" class="white--text">Concerts</v-btn>
     <v-spacer></v-spacer>
     <v-btn x-large text to="/artists" class="white--text">Artists</v-btn>
     <v-spacer></v-spacer>
