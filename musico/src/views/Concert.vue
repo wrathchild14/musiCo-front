@@ -10,7 +10,7 @@
                                 <v-card class="elevation-0 my-auto" color="transparent" >
                                     <div class="ml-10">
                                             
-                                            <h1 class="red--text text--darken-1 font-weight-medium" style="font-size: 3em">{{date}}</h1>
+                                            <h1 class="red--text text--darken-1 font-weight-medium font-italic" style="font-size: 3em">{{date}}</h1>
                                         
                                         <h1 class="white--text font-weight-bold my-10" height="400" style="font-size: 4.7em; font-family: 'Verdana'">{{artist_name}}</h1>
                                         
