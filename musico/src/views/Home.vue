@@ -6,7 +6,7 @@
         <v-row class="my-10">
           <v-col cols="6">
             <v-card class="pa-5 elevation-0 mx-auto" height="700px"> 
-              <v-img  src="./logo.png" width="500px" height="350px" ></v-img>
+              <v-img  src="@/assets/home_logo.png" width="500px" height="350px" ></v-img>
               <h1 class="blue-grey--text text--darken-4">Discover your favorite concerts and artists</h1>
               <h2 class="font-italic blue-grey--text text--darken-4">Be the first to know about concerts, tour announcements and news based on the music you love</h2>
               <v-btn x-large center class="my-10" color="red darken-1 white--text" to="/events">Find concerts <v-icon right>mdi-chevron-right</v-icon> </v-btn>
