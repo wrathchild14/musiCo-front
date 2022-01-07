@@ -61,7 +61,17 @@
                         >
                         <v-card-title >
                             <div class="font-weight-bold text-h5">
-                            {{ event.artist.name }}
+                                <v-card>
+                                    <router-link
+                                    class="link-style black--text"
+                                    style="text-decoration:none"
+                                    :to="{name: 'concert', params: {id: event.artist.id, artist_name: event.artist.name, artist_img: event.artist.img_link, date: event.date, venue_name: event.venue.name, venue_info: event.venue.info, add_info: event.additional_info}}"
+                                >
+                                    <h4 class="pa-1">{{ event.artist.name }}</h4>
+                                </router-link>
+                                </v-card>
+                                
+                            
                             </div>
                         </v-card-title>
                         </v-img>

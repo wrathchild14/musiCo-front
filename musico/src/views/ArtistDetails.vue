@@ -16,7 +16,7 @@
                                 </v-col>
                                 <v-col>
                                     <v-card class="elevation-0" color="transparent">
-                                        <v-img :src="img" width="400" height="300" class="mx-auto"></v-img>
+                                        <v-img :src="img" lazy-src="https://miro.medium.com/max/880/0*H3jZONKqRuAAeHnG.jpg" width="400" height="300" class="mx-auto"></v-img>
                                     </v-card>
                                 </v-col>
                             </v-row>
@@ -93,7 +93,7 @@
 import NavBar from '@/components/NavBar';
 
 export default {
-    name: 'Artists',
+    name: 'ArtistDetails',
     components: {NavBar},
     props: {
         id: {

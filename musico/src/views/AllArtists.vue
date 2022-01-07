@@ -76,7 +76,7 @@
                                         <router-link
                                         class="link-style black--text"
                                         style="text-decoration:none"
-                                        :to="{name: 'proba', params: {id:artist.id, name: artist.name, genres: artist.genres, img: artist.img_link}}"
+                                        :to="{name: 'artistdetails', params: {id:artist.id, name: artist.name, genres: artist.genres, img: artist.img_link}}"
                                         >
                                         {{ artist.name }}
                                         </router-link>    

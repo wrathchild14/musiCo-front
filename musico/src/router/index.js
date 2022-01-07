@@ -2,8 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import Events from '../views/Events'
+import Concert from '../views/Concert'
 import AllArtists from '../views/AllArtists'
-import Proba from '../views/Proba'
+import ArtistDetails from '../views/ArtistDetails'
 import MyProfile from '../views/MyProfile'
 
 Vue.use(VueRouter)
@@ -29,9 +30,15 @@ const routes = [{
     component: AllArtists
   },
   {
-    path: '/proba/:id',
-    name: 'proba',
-    component: Proba,
+    path: '/artistdetails/:id',
+    name: 'artistdetails',
+    component: ArtistDetails,
+    props: true,
+  },
+  {
+    path: '/concert/:id',
+    name: 'concert',
+    component: Concert,
     props: true,
   }
 ]
