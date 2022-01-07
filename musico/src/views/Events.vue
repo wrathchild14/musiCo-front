@@ -30,6 +30,19 @@
                 >
                     No events for that city
                 </v-alert>
+                <v-card v-if="noMovies" class="my-14 elevation-0"> 
+                    <v-row>
+                        <v-col>
+                            <v-img width="600" height="350" class="mx-auto" style="border-radius: 10px" src="https://www.czechuniversities.com/uploads/2020/01/3380.jpg"></v-img>
+                        </v-col>
+                        <v-col>
+                            <v-img width="600" height="350" class="mx-auto" style="border-radius: 10px" src="https://cdn.londonandpartners.com/visit/london-organisations/alexandra-palace/92923-640x360-alexandra-palace-gig-640.jpg"></v-img>
+                        </v-col>
+                    </v-row>
+                    <div class="text-center my-14">
+                        <h1 class="red--text text--darken-1 font-italic">Life is made of small moments like this!</h1>
+                    </div>
+                </v-card>
                 
                 <v-row>
                     <v-col v-for="event in events" :key="event.id" md="4" xs="12">
