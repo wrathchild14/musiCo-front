@@ -5,6 +5,7 @@ import Events from '../views/Events'
 import Artists from '../views/Artists'
 import AllArtists from '../views/AllArtists'
 import Proba from '../views/Proba'
+import MyProfile from '../views/MyProfile'
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,11 @@ const routes = [{
     path: '/events',
     name: 'Events',
     component: Events
+  },
+  {
+    path: '/myProfile',
+    name: 'MyProfile',
+    component: MyProfile
   },
   {
     path: '/artists',

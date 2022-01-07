@@ -1,6 +1,7 @@
 <template>
   <v-main>
-    <v-btn x-large text @click="dialog = true" class="white--text">Profile</v-btn>
+    <v-btn v-if="!checkToken()" x-large text @click="dialog = true" class="white--text">Profile</v-btn>
+    <v-btn v-if="checkToken()" to="/myProfile" x-large text class="green--text">Profile</v-btn>
 
     <v-dialog v-model="dialog" max-width="600px" min-width="360px">
       <div>
@@ -148,6 +149,12 @@ export default {
     },
   },
   methods: {
+    beforeDestroy () {
+      localStorage.removeItem('token');
+    },
+    checkToken() {
+      return JSON.parse(localStorage.getItem('token')) != null;
+    },
     validate() {
       // Log in
       if (this.$refs.loginForm.validate()) {
@@ -159,6 +166,8 @@ export default {
           .then((response) => {
             const message = response.data.data.message; // ? Because the response's json is already called data
             const token = response.data.token;
+
+            localStorage.setItem( 'token', JSON.stringify(token) );
 
             console.log("Message: " + message, "\nTOKEN: " + token);
             console.log("User: " + this.loginUsername + " logged succesfully");
@@ -181,7 +190,7 @@ export default {
             const message = response.data.message; // ? Because the response's json is already called data
             const token = response.data.token;
 
-            console.log(response.data);
+            localStorage.setItem( 'token', JSON.stringify(token) );
 
             if (message == undefined) {
               console.log("User already exists");
