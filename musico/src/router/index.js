@@ -4,6 +4,7 @@ import Home from '../views/Home'
 import Events from '../views/Events'
 import Artists from '../views/Artists'
 import AllArtists from '../views/AllArtists'
+import Proba from '../views/Proba'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,12 @@ const routes = [{
     name: 'AllArtists',
     component: AllArtists
   },
+  {
+    path: '/proba/:id',
+    name: 'proba',
+    component: Proba,
+    props: true,
+  }
 ]
 
 const router = new VueRouter({
