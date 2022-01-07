@@ -14,8 +14,8 @@
         <v-card width="70%" class="mx-auto my-10 elevation-0">
             <div class="text-center">
                 <h1>Events at your location:</h1>
-                <subtitle-1>Fixed country: {{ this.
-                    country }}</subtitle-1>
+                <div class="subtitle-1">Fixed country: {{ this.
+                    country }}</div>
             </div>
         </v-card>
 
