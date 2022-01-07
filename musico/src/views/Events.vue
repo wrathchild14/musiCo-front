@@ -92,6 +92,12 @@ export default {
                 // Event gets default image if it doesn't have the artist image
                 if (this.events[i].artist.img_link === null) {
                     this.events[i].artist.img_link = 'https://media.istockphoto.com/photos/concert-stage-on-rock-festival-music-instruments-silhouettes-picture-id1199243596?k=20&m=1199243596&s=612x612&w=0&h=5L3fWhbB4YtVOPsnnqrUg22FaHnSGVCjkrG79wB31Tc=';
+                } 
+                else {
+                    // Lil bit of cringe string formatting
+                    let img_link_string = String(this.events[i].artist.img_link);
+                    img_link_string = img_link_string.split(",")[0].replace("[","").replace("]","").replace(/'/g, '');
+                    this.events[i].artist.img_link = img_link_string;
                 }
             }
         },
