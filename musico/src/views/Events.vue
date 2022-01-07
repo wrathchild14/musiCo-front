@@ -14,6 +14,8 @@
         <v-card width="70%" class="mx-auto my-10 elevation-0">
             <div class="text-center">
                 <h1>Events at your location:</h1>
+                <subtitle-1>Fixed country: {{ this.
+                    country }}</subtitle-1>
             </div>
         </v-card>
 
@@ -92,6 +94,7 @@ export default {
     name: 'Events',
     components: {NavBar},
     data: () => ({
+        country: 'Slovenia',
         loadingSearch: false,
         noMovies:true,
         
@@ -115,8 +118,9 @@ export default {
             }
         },
         getEvents() {
-            let token = JSON.parse( localStorage.getItem('token') );
-            console.log(token);
+            // Testing fetching token
+            // let token = JSON.parse( localStorage.getItem('token') );
+            // console.log(token);
 
             this.loadingSearch = true;
 
@@ -124,9 +128,11 @@ export default {
             this.city.toLowerCase;
             this.city = this.city.charAt(0).toUpperCase() + this.city.slice(1);
 
+            // API: event/?city=Ljubljana&country=Slovenia
             getAPI
-                .get('event/' + this.city + '/')
+                .get('event/?city=' + this.city + '&country=' + this.country)
                 .then((response) => {
+                    console.log(response.data);
                     this.events = response.data;
                     
                     if (this.events.length == 0 ) {
