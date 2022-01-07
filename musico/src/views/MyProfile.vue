@@ -4,11 +4,24 @@
 
     <v-container fluid>
       <v-row align="center" justify="space-around" class="pa-1 ma-2">
+        <!-- Lig -->
         <v-btn @click="logSpotify()" dark large color="green">
           <span class="text-truncate">Spotify log-in</span>
         </v-btn>
+        <!-- Fill -->
         <v-btn
           @click="loadData()"
+          dark
+          large
+          color="green"
+          outlined
+          v-if="logged"
+        >
+          <span class="text-truncate">Load your data</span>
+        </v-btn>
+        <!-- Get -->
+        <v-btn
+          @click="getData()"
           dark
           large
           color="green"
@@ -72,6 +85,18 @@ export default {
     logged: false,
   }),
   methods: {
+    loadData() {
+        // This actually fills the data
+        // /user/spotify-is-auth/
+        getAPI
+        .get("user/spotify-is-auth/", this.config)
+        .then((response) => {
+            console.log(response, 'success');
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
     logSpotify() {
       // GET at 127.0.0.1:8000/user/spotify-auth/ and redirect to its url\
       getAPI
@@ -86,7 +111,7 @@ export default {
           console.log(err);
         });
     },
-    loadData() {
+    getData() {
       getAPI
         .get("user/profile/", this.config)
         .then((response) => {

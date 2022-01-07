@@ -190,9 +190,8 @@ export default {
             const message = response.data.message; // ? Because the response's json is already called data
             const token = response.data.token;
 
-            localStorage.setItem( 'token', JSON.stringify(token) );
 
-            if (message == undefined) {
+            if (response.data.username == "A user with that username already exists.") {
               console.log("User already exists");
               this.successRegister = false;
               this.failedRegister = true;
@@ -200,8 +199,10 @@ export default {
             } else {
               console.log("Message: " + message, "\nTOKEN: " + token);
               console.log("User: " + this.username + " registered succesfully");
+              localStorage.setItem( 'token', JSON.stringify(token) );
               this.showRegister = false;
               this.successRegister = true;
+              this.failedRegister = false;
             }
           })
           .catch((err) => {
