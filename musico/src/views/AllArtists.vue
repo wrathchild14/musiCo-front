@@ -68,13 +68,15 @@
                                 <v-img
                                 height="300" width="300" class="mx-auto"
                                 :src="artist.img_link"
+                                lazy-src="https://miro.medium.com/max/880/0*H3jZONKqRuAAeHnG.jpg"
                                 >
                                 </v-img>
                                 <div class="text-center">
                                     <h3 class="my-4">
                                         <router-link
-                                        class="link-style"
-                                        :to="{name: 'proba', params: {id:artist.id, name: artist.name, genre: artist.genres}}"
+                                        class="link-style black--text"
+                                        style="text-decoration:none"
+                                        :to="{name: 'proba', params: {id:artist.id, name: artist.name, genres: artist.genres, img: artist.img_link}}"
                                         >
                                         {{ artist.name }}
                                         </router-link>    

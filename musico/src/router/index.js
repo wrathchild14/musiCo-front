@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home'
 import Events from '../views/Events'
-import Artists from '../views/Artists'
 import AllArtists from '../views/AllArtists'
 import Proba from '../views/Proba'
 import MyProfile from '../views/MyProfile'
@@ -23,11 +22,6 @@ const routes = [{
     path: '/myProfile',
     name: 'MyProfile',
     component: MyProfile
-  },
-  {
-    path: '/artists',
-    name: 'Artists',
-    component: Artists
   },
   {
     path: '/allartists',
