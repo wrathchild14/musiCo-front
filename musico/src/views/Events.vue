@@ -13,7 +13,7 @@
         </v-card>
         <v-card width="70%" class="mx-auto my-10 elevation-0">
             <div class="text-center">
-                <h1>Events at your location:</h1>
+                <h1 style="font-family: 'Verdana'">Events at your location:</h1>
                 <div class="subtitle-1">Fixed country: {{ this.
                     country }}</div>
             </div>
@@ -42,7 +42,7 @@
                         </v-col>
                     </v-row>
                     <div class="text-center my-14">
-                        <h1 class="red--text text--darken-1 font-italic">Life is made of small moments like this!</h1>
+                        <h1 class="red--text text--darken-1 font-italic" style="font-family: 'Verdana'">Life is made of small moments like this!</h1>
                     </div>
                 </v-card>
                 
@@ -67,7 +67,7 @@
                                     style="text-decoration:none"
                                     :to="{name: 'concert', params: {id: event.artist.id, artist_name: event.artist.name, artist_img: event.artist.img_link, date: event.date, venue_name: event.venue.name, venue_info: event.venue.info, add_info: event.additional_info}}"
                                 >
-                                    <h4 class="pa-1">{{ event.artist.name }}</h4>
+                                    <h4 class="pa-1" style="font-family: 'Verdana'">{{ event.artist.name }}</h4>
                                 </router-link>
                                 </v-card>
                                 
@@ -82,7 +82,7 @@
 
                         <v-card-text class="text--primary">
 
-                        <div ><h2 class="red--text text--darken-1 my-2">{{ event.venue.name }}</h2></div>
+                        <div ><h2 class="red--text text--darken-1 my-2" style="font-family: 'Verdana'">{{ event.venue.name }}</h2></div>
                         <div><h3 class="font-weight-light my-2"><v-icon >mdi-map-marker</v-icon>{{ event.venue.info }}</h3></div>
                         </v-card-text>
 

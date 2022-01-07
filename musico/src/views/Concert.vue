@@ -12,7 +12,7 @@
                                             
                                             <h1 class="red--text text--darken-1 font-weight-medium" style="font-size: 3em">{{date}}</h1>
                                         
-                                        <h1 class="white--text font-weight-bold my-10" height="400" style="font-size: 4.7em">{{artist_name}}</h1>
+                                        <h1 class="white--text font-weight-bold my-10" height="400" style="font-size: 4.7em; font-family: 'Verdana'">{{artist_name}}</h1>
                                         
                                             
                                         
@@ -32,8 +32,8 @@
                 <v-col>
                     <v-card class="elevation-0">
                         <div class="text-center">
-                            <h1 class="font-weight-bold red--text text--darken-1 ">Venue Details</h1>
-                            <h1 class="my-10 text--darken-1 font-weight-medium" style="font-size: 3em">{{venue_name}}</h1>
+                            <h1 class="font-weight-bold red--text text--darken-1 " style="font-family: 'Verdana'">Venue Details</h1>
+                            <h1 class="my-10 text--darken-1 font-weight-medium" style="font-size: 3em; font-family: 'Verdana'">{{venue_name}}</h1>
                             <h2 class="font-weight-light">{{venue_info}}</h2>
                         </div>                      
                     </v-card>
@@ -41,7 +41,7 @@
                 <v-col>
                     <v-card class="elevation-0">
                         <div class="text-center">
-                            <h1 class="font-weight-bold red--text text--darken-1 ">Additional Details</h1>
+                            <h1 class="font-weight-bold red--text text--darken-1 " style="font-family: 'Verdana'">Additional Details</h1>
                             <h2 class="my-10 font-weight-light">{{add_info}}</h2>
                         </div> 
                     </v-card>
@@ -52,6 +52,7 @@
 </template>
 <script>
 import NavBar from '@/components/NavBar';
+
 
 export default {
     name: 'Concert',

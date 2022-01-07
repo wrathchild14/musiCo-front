@@ -7,8 +7,8 @@
           <v-col cols="6">
             <v-card class="pa-5 elevation-0 mx-auto" height="700px"> 
               <v-img  src="@/assets/home_logo.png" width="500px" height="350px" ></v-img>
-              <h1 class="blue-grey--text text--darken-4">Discover your favorite concerts and artists</h1>
-              <h2 class="font-italic blue-grey--text text--darken-4">Be the first to know about concerts, tour announcements and news based on the music you love</h2>
+              <h1 class="blue-grey--text text--darken-4" style="font-family: 'Verdana'">Discover your favorite concerts and artists</h1>
+              <h2 class="font-italic blue-grey--text text--darken-4 font-weight-medium" style="font-family: 'Verdana'">Be the first to know about concerts, tour announcements and news based on the music you love</h2>
               <v-btn x-large center class="my-10" color="red darken-1 white--text" to="/events">Find concerts <v-icon right>mdi-chevron-right</v-icon> </v-btn>
             </v-card>
           </v-col>

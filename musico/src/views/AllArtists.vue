@@ -6,7 +6,7 @@
             <div >
                 <v-parallax class="my" height="400" src="https://www.pier17ny.com/wp-content/uploads/2021/09/PassionPit-TheBeaches-Night1-115-1560x960.jpg">
                 <v-card class="elevation-0 ml-5" color="transparent">
-                    <h1 class="white--text font-weight-bold" style="font-size:3em">Discover your favorite artists</h1>
+                    <h1 class="white--text font-weight-bold" style="font-size:3em; font-family: 'Verdana'" >Discover your favorite artists</h1>
                 </v-card>
                 <v-card class="elevation-0 font-weight-light font-italic my-5 ml-5" color="transparent">
                     <h3 class="white--text">Be the first to know about concerts, tour announcements <br> and news based on the music you love</h3>
@@ -17,7 +17,7 @@
                 </v-parallax>
             </div>
             <div class="text-center my-5">
-                <h2 class="font-weight-medium text-decoration-underline">Search for artists</h2>
+                <h2 class="font-weight-medium text-decoration-underline" style="font-family: 'Verdana'">Search for artists</h2>
                 <v-row>
                     <v-text-field :loading="loadingSearch" v-model="name"  outline label="Search for an artist" append-icon="mdi-search" prepend-inner-icon="mdi-account-music"></v-text-field>
                     <v-btn @click="getEvents" color="primary" x-large elevation="1" plain icon >
@@ -27,32 +27,32 @@
             </div>
             <div class="text-center " v-if="noArtists">
                 <v-card class="elevation-0 my-5">
-                    <h1 style="font-size: 2.5em" class="red--text text--darken-1 font-weight-bold ">Most popular artists worldwide</h1>
+                    <h1 style="font-size: 2.5em; font-family: 'Verdana'" class="red--text text--darken-1 font-weight-bold " >Most popular artists worldwide</h1>
                 </v-card>
                 <v-card class="elevation-0 my-5">
                     <v-row>
                         <v-col>
                             <v-card class="elevation-1 my-5">
                                 <v-img height="300" width="300" class="mx-auto" src="https://media.nu.nl/m/7w3x7mza4otb_sqr256.jpg/drake-reageert-voor-het-eerst-op-festivaldrama-na-aanklacht-hart-is-gebroken.jpg"></v-img>
-                                <h3 class="my-4">Drizzy</h3>
+                                <h3 class="my-4" style="font-family: 'Verdana'">Drake</h3>
                             </v-card>
                         </v-col>
                         <v-col>
                             <v-card class="elevation-1 my-5">
                                 <v-img height="300" width="300" class="mx-auto" src="https://i.scdn.co/image/ab6761610000e5ebcdce7620dc940db079bf4952"></v-img>
-                                <h3 class="my-4">Ariana Grande</h3>
+                                <h3 class="my-4" style="font-family: 'Verdana'">Ariana Grande</h3>
                             </v-card>
                         </v-col>
                         <v-col>
                             <v-card class="elevation-1 my-5">
                                 <v-img height="300" width="300" class="mx-auto" src="https://iscale.iheart.com/catalog/artist/744880"></v-img>
-                                <h3 class="my-4">The Weeknd</h3>
+                                <h3 class="my-4" style="font-family: 'Verdana'">The Weeknd</h3>
                             </v-card>
                         </v-col>
                         <v-col>
                             <v-card class="elevation- my-5">
                                 <v-img height="300" width="300" class="mx-auto" src="https://mogujatosama.rs/sites/default/files/images/5(626).jpg"></v-img>
-                                <h3 class="my-4">Adele</h3>
+                                <h3 class="my-4" style="font-family: 'Verdana'">Adele</h3>
                             </v-card>
                         </v-col>
                     </v-row>
@@ -75,7 +75,7 @@
                                     <h3 class="my-4">
                                         <router-link
                                         class="link-style black--text"
-                                        style="text-decoration:none"
+                                        style="text-decoration:none; font-family: 'Verdana'"
                                         :to="{name: 'artistdetails', params: {id:artist.id, name: artist.name, genres: artist.genres, img: artist.img_link}}"
                                         >
                                         {{ artist.name }}
