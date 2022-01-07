@@ -71,7 +71,14 @@
                                 >
                                 </v-img>
                                 <div class="text-center">
-                                    <h3 class="my-4">{{ artist.name }}</h3>   
+                                    <h3 class="my-4">
+                                        <router-link
+                                        class="link-style"
+                                        :to="{name: 'proba', params: {id:artist.id, name: artist.name, genre: artist.genres}}"
+                                        >
+                                        {{ artist.name }}
+                                        </router-link>    
+                                    </h3>   
                                 </div>
 
                             </v-card>
@@ -98,6 +105,9 @@ export default {
         
         name: '',
         artists: [
+        ],
+        filtered: [
+
         ]
     }),
     methods: {
@@ -121,7 +131,7 @@ export default {
                 .then((response) => {
 
                     
-                    this.filtered = []
+                    //this.filtered = []
                     this.artists = response.data;
                     this.artists.forEach(element => {
                         if(element.name.includes(this.name)){
