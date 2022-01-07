@@ -14,7 +14,7 @@
           </v-col>
           <v-col cols="6">
             <v-card class="pa-5 elevation-0" height="700px">
-              <v-img class="mx-auto"   src="https://st3.depositphotos.com/1001599/18936/v/450/depositphotos_189361000-stock-illustration-dj-mixing-music-on-turntables.jpg" width="600px"  ></v-img>
+              <v-img class="mx-auto"   src="https://www.getillustrations.com/packs/music-illustrations/scenes/_1x/music%20_%20online,%20jamming,%20guitar,%20instrument,%20band,%20man,%20woman,%20person,%20character,%20people_md.png" width="650px"  ></v-img>
             </v-card>
           </v-col>
         </v-row>
